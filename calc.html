@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Working my way up to a full functional calculator"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Working my way up to a functioning calculator</title>
-    <link rel="stylesheet" href="calc.css" />
-    <script src="calc.js" defer></script>
-  </head>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Working my way up to a full functional calculator"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Working my way up to a functioning calculator</title>
+        <link rel="stylesheet" href="calc.css" />
+        <script src="calc.js" defer></script>
+    </head>
 
-  <body>
-    <header>
-      <h1>A calculator by <a href="https://fyrfli.io">@fyrfli</a></h1>
-    </header>
-    <main id="jscontainer" class="container">
-      <div class="result" id="jsresult"></div>
-      <input class="nos" type="button" value="1" />
-      <input class="nos" type="button" value="2" />
-      <input class="nos" type="button" value="3" />
-      <input class="nos" type="button" value="4" />
-      <input class="nos" type="button" value="5" />
-      <input class="nos" type="button" value="6" />
-      <input class="nos" type="button" value="7" />
-      <input class="nos" type="button" value="8" />
-      <input class="nos" type="button" value="9" />
-      <input class="nos" type="button" value="0" />
-      <input class="op" type="button" value="+" />
-      <input class="op" type="button" value="-" />
-      <input class="op" type="button" value="*" />
-      <input class="op" type="button" value="/" />
-      <input class="op" type="button" value="=" />
-    </main>
+    <body>
+        <header>
+            <h1>A calculator by <a href="https://fyrfli.io">@fyrfli</a></h1>
+        </header>
+        <main id="jscontainer" class="container">
+            <div class="result" id="jsresult"></div>
+            <input class="nos" type="button" value="1" />
+            <input class="nos" type="button" value="2" />
+            <input class="nos" type="button" value="3" />
+            <input class="nos" type="button" value="4" />
+            <input class="nos" type="button" value="5" />
+            <input class="nos" type="button" value="6" />
+            <input class="nos" type="button" value="7" />
+            <input class="nos" type="button" value="8" />
+            <input class="nos" type="button" value="9" />
+            <input class="nos" type="button" value="0" />
+            <input class="op" type="button" value="+" />
+            <input class="op" type="button" value="-" />
+            <input class="op" type="button" value="*" />
+            <input class="op" type="button" value="/" />
+            <input class="op" type="button" value="=" />
+            <div id="jserror" class="error"></div>
+        </main>
 
-    <footer>
-      &copy;<span id="jsyear">&nbsp;</span> Camille Frantz (@fyrfli). All Rights
-      Reserved
-    </footer>
-  </body>
+        <div id="debug">&nbsp;</div>
+
+        <footer>
+            &copy;<span id="jsyear">&nbsp;</span> Camille Frantz (@fyrfli). All
+            Rights Reserved
+        </footer>
+    </body>
 </html>

@@ -1,40 +1,37 @@
 const nowYr = new Date();
 document.getElementById("jsyear").innerHTML = nowYr.getFullYear();
 
-window.onkeydown = function () {
-//     Also takes shift and alt, etc into considering.
-const validKeys = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "0",
-    "+",
-    "-",
-    "=",
-    "*",
-    "/",
-];
+const validKeys = ["1","2","3","4","5","6","7","8","9","0","+","-","=","*","/","C","c","A","a","Backspace"];
 const numbKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 const opKeys = ["+", "-", "=", "*", "/"];
 const clrKey = ["C", "c"];
-if (validKeys.includes(event.key)) {
-    //         1. Display keys until + - * / = c/C pressed
-    //         2. When + - * / = c/C pressed: calc or clear screen
-    //         3. When = pressed, show result.
-    document.getElementById("jsresult").innerHTML =
-    "You typed: " + event.key;
-} else {
-    alert("That key is not a number or operator");
-}
+const delLast = "Backspace";
+    
+let resultFld = document.getElementById("jsresult");
+let errorFld = document.getElementById("jserror");
+let calcArr = [];
+let ctr = 0;
+let keyPressd = "";
+let runningTtl = 0;
+
+// document.onkeydown = logkey;
+// document.onclick = logkey;    
+document.onclick = function () {
+    if (validKeys.includes(event.target.value)) {
+        errorFld.innerHTML = " ";
+        keyPressd = event.target.value;
+        if (opKeys.includes(keyPressd)) {
+            // switch (keyPressd) {
+            //     case "+":
+            // }
+            calcArr[ctr] = resultFld.textContent;
+            ctr++;
+            calcArr[ctr] = keyPressd;
+        }
+        resultFld.innerHTML += keyPressd;
+    }
+    else {
+        errorFld.innerHTML = event.target.value + " is not a valid option";
+    };
 };
 
-jscontainer.onclick = function () {
-document.getElementById("jsresult").innerHTML =
-    "You clicked: " + event.target.value;
-};
